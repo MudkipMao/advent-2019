@@ -1,6 +1,7 @@
 # My puzzle input is 382345-843167
 total_valid = 0
 for i in range(382345, 843168):
+    # This converts the int to a list of it's digits
     val_list = [int(x) for x in str(i)]
     adjacent_val = False
     increasing_val = True

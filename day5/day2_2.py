@@ -18,10 +18,12 @@ for i in range(100):
             if opcode == 99:
                 break
             val = 0
+            arg1 = data_array[current_index + 1]
+            arg2 = data_array[current_index + 2]
             if opcode == 1:
-                val = data_array[data_array[current_index + 1]] + data_array[data_array[current_index + 2]]
+                val = data_array[arg1] + data_array[arg2]
             if opcode == 2:
-                val = data_array[data_array[current_index + 1]] * data_array[data_array[current_index + 2]]
+                val = data_array[arg1] * data_array[arg2]
             data_array[data_array[current_index + 3]] = val
             current_index += 4
         if data_array[0] == target:
